@@ -1,25 +1,15 @@
 <html>
-
-<link href="style.css" rel="stylesheet">
-<script src="lazy.js" type="text/javascript"></script>
-
-
-<div class="container">
-    <div class="error404page">
-        <div class="newcharacter404">
-            <div class="chair404"></div>
-            <div class="leftshoe404"></div>
-            <div class="rightshoe404"></div>
-            <div class="legs404"></div>
-            <div class="torso404">
-                <div class="body404"></div>
-                <div class="leftarm404"></div>
-                <div class="rightarm404"></div>
-                <div class="head404">
-                    <div class="eyes404"></div>
-                </div>
-            </div>
-            <div class="laptop404"></div>
-        </div>
-    </div>
-</div>
+<body>
+    <div id="counter">5</div>
+    <script>
+        setInterval(function() {
+            var div = document.querySelector("#counter");
+            var count = div.textContent * 1 - 1;
+            div.textContent = count;
+            if (count <= 0) {
+                window.location.replace("https://redirect.andrimo.com/");
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
